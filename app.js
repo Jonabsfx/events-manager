@@ -27,7 +27,7 @@ mongoose
    `mongodb+srv://jonabsfx:XwLsbt7KfaxjCoUZ@database.m0skrmk.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(3000);
+    app.listen(8000);
   })
   .catch(err => {
     console.log(err);

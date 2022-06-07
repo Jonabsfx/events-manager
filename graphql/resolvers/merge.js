@@ -2,9 +2,9 @@ import Event from "../../models/Event.js";
 import User from "../../models/User.js";
 import { dateToString } from "../../helpers/date.js";
 
-const events = async eventsIDs => {
+const events = async eventsIds => {
     try {
-        const events = await Event.find({ _id: { $in: eventIDs } });
+        const events = await Event.find({ _id: { $in: eventIds } });
         return events.map(event => {
             return transformEvent(event);
         });
@@ -13,18 +13,18 @@ const events = async eventsIDs => {
      }
 };
 
-const singleEvent = async eventID => {
+const singleEvent = async eventId => {
     try{
-        const event = await Event.findById(eventID);
+        const event = await Event.findById(eventId);
         return transformEvent(event);
     } catch(err){
         throw err;
     }
 };
 
-const user = async userID => {
+const user = async userId => {
     try {
-      const user = await User.findById(userID);
+      const user = await User.findById(userId);
       return {
         ...user._doc,
         _id: user.id,
