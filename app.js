@@ -4,7 +4,7 @@ import { graphqlHTTP } from 'express-graphql';
 import mongoose from 'mongoose';
 
 import graphQlSchema from './graphql/schema/index.js';
-import graphQlResolvers from './graphql/Resolvers/index.js'
+import graphQlResolvers from './graphql/resolvers/index.js'
 
 const app = express();
 
