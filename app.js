@@ -4,7 +4,8 @@ import { graphqlHTTP } from 'express-graphql';
 import mongoose from 'mongoose';
 
 import graphQlSchema from './graphql/schema/index.js';
-import graphQlResolvers from './graphql/resolvers/index.js'
+import graphQlResolvers from './graphql/resolvers/index.js';
+import isAuth from './middleware/is-auth.js';
 
 const app = express();
 
@@ -18,6 +19,9 @@ app.use(
     graphiql: true
   })
 );
+
+app.use(isAuth);
+
 mongoose
   .connect(
    `mongodb+srv://jonabsfx:XwLsbt7KfaxjCoUZ@database.m0skrmk.mongodb.net/?retryWrites=true&w=majority`
