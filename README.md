@@ -13,4 +13,4 @@ Run the server
 ```sh
 npm start
 ```
-Acesse o projeto em http://localhost:8000
+Acesse o projeto em http://localhost:8000/api

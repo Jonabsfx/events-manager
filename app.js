@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(
-  '/graphql',
+  '/api',
   graphqlHTTP({
     schema: graphQlSchema,
     rootValue: graphQlResolvers,
